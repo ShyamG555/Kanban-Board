@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="main-heading">Kanban Board</h1>
+  <div class="board-container">
+    <div class="box" id="todo">
+      <h2>To Do</h2>
+      <div class="task-list" id="todo-tasks"></div>
+      <button class="add-button" onclick="openAddBox('todo')">+ Add Task</button>
+    </div>
+
+    <div class="box" id="doing">
+      <h2>Doing</h2>
+      <div class="task-list" id="doing-tasks"></div>
+      <button class="add-button" onclick="openAddBox('doing')">+ Add Task</button>
+    </div>
+
+    <div class="box" id="done">
+      <h2>Done</h2>
+      <div class="task-list" id="done-tasks"></div>
+      <button class="add-button" onclick="openAddBox('done')">+ Add Task</button>
+    </div>
+  </div>
+
+  <div id="add-popup" class="popup">
+    <div class="popup-content">
+      <span class="close-button" onclick="closeAddBox()">&times;</span>
+      <h3>Add Task</h3>
+      <input type="text" id="task-input" placeholder="Enter task...">
+      <button onclick="addTask()">Add</button>
+    </div>
+  </div>
+  <footer>
+    <p>🚀 Built with ❤️ by Shyam! 🌟</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
